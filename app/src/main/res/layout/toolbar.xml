@@ -27,6 +27,12 @@
                 app:layout_constraintCircle="@id/toolbar_container"
                 app:layout_constraintCircleRadius="0dp" />
 
+            <EditText
+                android:id="@+id/toolbar_search"
+                style="@style/Text.Toolbar.Edit"
+                app:layout_constraintStart_toEndOf="@id/toolbar_left_action"
+                app:layout_constraintEnd_toStartOf="@id/toolbar_right_action"/>
+
             <ImageView
                 android:id="@+id/toolbar_right_action"
                 style="@style/ImageView.Toolbar.Constraint"

@@ -1,12 +1,15 @@
 package android.robnetwork.org.fofi
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
+import android.robnetwork.org.fofi.databinding.ActivityMainBinding
+import android.robnetwork.org.fofi.databinding.ToolbarBinding
+import android.view.View
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>() {
+    override val layoutRes = R.layout.activity_main
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    override fun setupUI(binding: ActivityMainBinding) {
+        binding.toolbar.toolbarTitle.visibility = View.GONE
     }
+
+    fun toolbar(): ToolbarBinding? = binding?.toolbar
 }

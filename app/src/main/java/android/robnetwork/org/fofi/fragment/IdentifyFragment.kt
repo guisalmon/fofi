@@ -4,7 +4,7 @@ import android.robnetwork.org.fofi.BaseFragment
 import android.robnetwork.org.fofi.R
 import android.robnetwork.org.fofi.databinding.FragmentMainBinding
 
-class MainFragment: BaseFragment<FragmentMainBinding>() {
+class IdentifyFragment: BaseFragment<FragmentMainBinding>() {
     override val layoutRes: Int
         get() = R.layout.fragment_main
 

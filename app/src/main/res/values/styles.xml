@@ -25,6 +25,11 @@
         <item name="textAllCaps">true</item>
     </style>
 
+    <style name="Text.Toolbar.Edit">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
     <style name="ImageView"/>
 
     <style name="ImageView.Toolbar">

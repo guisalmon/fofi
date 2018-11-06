@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/toolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_07">
+
+            <ImageView
+                android:id="@+id/toolbar_left_action"
+                style="@style/ImageView.Toolbar.Constraint"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/Text.Toolbar"
+                app:layout_constraintCircle="@id/toolbar_container"
+                app:layout_constraintCircleRadius="0dp" />
+
+            <ImageView
+                android:id="@+id/toolbar_right_action"
+                style="@style/ImageView.Toolbar.Constraint"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.Toolbar>
+</layout>

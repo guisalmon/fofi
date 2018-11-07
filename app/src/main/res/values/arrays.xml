@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="iso">
+        <item>Any</item>
+        <item>100</item>
+        <item>125</item>
+        <item>200</item>
+        <item>400</item>
+        <item>800</item>
+        <item>1600</item>
+        <item>3200</item>
+        <item>6400</item>
+        <item>12800</item>
+    </string-array>
+    <string-array name="film">
+        <item>Any</item>
+        <item>Kodak 400TX</item>
+        <item>Kodak 400TMax</item>
+        <item>Kodak Portra 400</item>
+        <item>Kodak Portra 800</item>
+    </string-array>
+</resources>

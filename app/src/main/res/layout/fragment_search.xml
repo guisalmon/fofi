@@ -48,5 +48,47 @@
             app:layout_constraintStart_toEndOf="@id/spacer_start"
             app:layout_constraintTop_toBottomOf="@id/spacer_top"/>
 
+        <View
+            android:id="@+id/spacer_color_iso"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_02"
+            app:layout_constraintTop_toBottomOf="@id/color_selector"
+            app:layout_constraintStart_toEndOf="@id/spacer_start" />
+
+        <Spinner
+            android:id="@+id/sensibility_selector"
+            android:layout_width="@dimen/size_12"
+            android:layout_height="@dimen/size_04"
+            android:background="@drawable/threeway_button_bg"
+            android:dropDownWidth="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/spacer_color_iso"
+            app:layout_constraintStart_toEndOf="@id/spacer_start" />
+
+        <View
+            android:id="@+id/spacer_iso_film"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_02"
+            app:layout_constraintTop_toBottomOf="@id/sensibility_selector"
+            app:layout_constraintStart_toEndOf="@id/spacer_start" />
+
+        <Spinner
+            android:id="@+id/film_selector"
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_04"
+            android:background="@drawable/threeway_button_bg"
+            android:dropDownWidth="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/spacer_iso_film"
+            app:layout_constraintStart_toEndOf="@id/spacer_start" />
+
+        <ImageView
+            android:layout_width="@dimen/size_06"
+            android:layout_height="@dimen/size_06"
+            android:src="@drawable/calendar"
+            android:tint="@color/white_pressed_dark"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/spacer_top"
+            app:layout_constraintEnd_toStartOf="@id/spacer_end"/>
+
     </android.support.constraint.ConstraintLayout>
 </layout>

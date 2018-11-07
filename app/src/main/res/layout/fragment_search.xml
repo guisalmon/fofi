@@ -81,6 +81,7 @@
             app:layout_constraintStart_toEndOf="@id/spacer_start" />
 
         <ImageView
+            android:id="@+id/date_range_button"
             android:layout_width="@dimen/size_06"
             android:layout_height="@dimen/size_06"
             android:src="@drawable/calendar"

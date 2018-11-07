@@ -9,6 +9,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override val layoutRes = R.layout.activity_main
 
     override fun setupUI(binding: ActivityMainBinding) {
+        super.setupUI(binding)
         binding.toolbar.toolbarTitle.visibility = View.GONE
     }
 

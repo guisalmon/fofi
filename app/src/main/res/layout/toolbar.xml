@@ -27,11 +27,12 @@
                 app:layout_constraintCircle="@id/toolbar_container"
                 app:layout_constraintCircleRadius="0dp" />
 
-            <EditText
+            <android.support.v7.widget.SearchView
                 android:id="@+id/toolbar_search"
-                style="@style/Text.Toolbar.Edit"
-                app:layout_constraintStart_toEndOf="@id/toolbar_left_action"
-                app:layout_constraintEnd_toStartOf="@id/toolbar_right_action"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:tint="@color/white"
+                app:searchHintIcon="@null" />
 
             <ImageView
                 android:id="@+id/toolbar_right_action"

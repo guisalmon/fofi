@@ -1,4 +1,4 @@
-package android.robnetwork.org.fofi
+package android.robnetwork.org.fofi.ui
 
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding

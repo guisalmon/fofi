@@ -1,5 +1,6 @@
-package android.robnetwork.org.fofi
+package android.robnetwork.org.fofi.ui
 
+import android.robnetwork.org.fofi.R
 import android.robnetwork.org.fofi.databinding.ActivityMainBinding
 import android.robnetwork.org.fofi.databinding.ToolbarBinding
 import android.view.View

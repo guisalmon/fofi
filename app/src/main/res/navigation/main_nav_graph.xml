@@ -5,6 +5,6 @@
 
     <fragment
         android:id="@+id/identify_fragment"
-        android:name="android.robnetwork.org.fofi.fragment.IdentifyFragment">
+        android:name="android.robnetwork.org.fofi.ui.fragment.IdentifyFragment">
     </fragment>
 </navigation>

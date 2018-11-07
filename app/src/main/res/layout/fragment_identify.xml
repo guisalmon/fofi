@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/header_spacer_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_13"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/header_diagonal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/header_diagonal_background"
+            app:layout_constraintTop_toBottomOf="@id/header_spacer_top"
+            app:layout_constraintDimensionRatio="9:3"/>
+
+        <View
+            android:id="@+id/spacer_start"
+            android:layout_width="@dimen/size_04"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/spacer_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_02"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/spacer_end"
+            android:layout_width="@dimen/size_04"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        
+        <View
+            android:id="@+id/qrcode_view"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_16"
+            android:background="@color/colorAccent"
+            app:layout_constraintStart_toEndOf="@id/spacer_start"
+            app:layout_constraintTop_toBottomOf="@id/spacer_top"
+            app:layout_constraintDimensionRatio="1:1"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size_07"
+            android:background="@color/colorAccent"
+            android:src="@drawable/send"
+            android:tint="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            app:fabSize="normal"
+            app:rippleColor="@color/colorAccentLight"
+            app:layout_constraintTop_toTopOf="@+id/header_diagonal"
+            app:layout_constraintEnd_toStartOf="@id/spacer_end"
+            app:layout_constraintDimensionRatio="1:1"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

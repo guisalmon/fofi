@@ -7,4 +7,5 @@
     <string name="add_film_type">Film name</string>
     <string name="add_sensibility">Iso</string>
     <string name="add_date">Time period</string>
+    <string name="add_location">Drive</string>
 </resources>

@@ -1,87 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/size_04">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size_12"
-            android:background="@color/colorPrimary"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingStart="@dimen/size_04"
-            android:paddingEnd="@dimen/size_04">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/size_04">
 
-            <Spinner
-                android:id="@+id/film_selector"
-                android:layout_width="@dimen/size_24"
-                android:layout_height="@dimen/size_04"
-                android:background="@drawable/threeway_button_bg"
-                android:dropDownWidth="match_parent"/>
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/add_film_type"
-                android:textAlignment="viewEnd"
-                android:textAllCaps="true"/>
+                android:layout_height="@dimen/size_12"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/size_04"
+                android:paddingEnd="@dimen/size_04">
 
+                <Spinner
+                    android:id="@+id/film_selector"
+                    android:layout_width="@dimen/size_24"
+                    android:layout_height="@dimen/size_04"
+                    android:background="@drawable/threeway_button_bg"
+                    android:dropDownWidth="match_parent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_film_type"
+                    android:textAlignment="viewEnd"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_12"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/size_04"
+                android:paddingEnd="@dimen/size_04">
+
+                <Spinner
+                    android:id="@+id/sensibility_selector"
+                    android:layout_width="@dimen/size_24"
+                    android:layout_height="@dimen/size_04"
+                    android:background="@drawable/threeway_button_bg"
+                    android:dropDownWidth="match_parent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_sensibility"
+                    android:textAlignment="viewEnd"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_12"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/size_04"
+                android:paddingEnd="@dimen/size_04">
+
+                <ImageView
+                    android:layout_width="@dimen/size_06"
+                    android:layout_height="@dimen/size_06"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/calendar"
+                    android:tint="@color/white_pressed_dark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_date"
+                    android:textAlignment="viewEnd"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
+        <View
+            android:id="@+id/spacer_end"
+            android:layout_width="@dimen/size_02"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/spacer_bottom"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size_12"
-            android:background="@color/colorPrimary"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingStart="@dimen/size_04"
-            android:paddingEnd="@dimen/size_04">
+            android:layout_height="@dimen/size_02"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-            <Spinner
-                android:id="@+id/sensibility_selector"
-                android:layout_width="@dimen/size_24"
-                android:layout_height="@dimen/size_04"
-                android:background="@drawable/threeway_button_bg"
-                android:dropDownWidth="match_parent"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/add_sensibility"
-                android:textAlignment="viewEnd"
-                android:textAllCaps="true"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/size_12"
-            android:background="@color/colorPrimary"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingStart="@dimen/size_04"
-            android:paddingEnd="@dimen/size_04">
-
-            <ImageView
-                android:layout_width="@dimen/size_06"
-                android:layout_height="@dimen/size_06"
-                android:src="@drawable/calendar"
-                android:tint="@color/white_pressed_dark"
-                android:clickable="true"
-                android:focusable="true"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/add_date"
-                android:textAlignment="viewEnd"
-                android:textAllCaps="true"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_continue"
+            android:layout_width="@dimen/size_07"
+            android:layout_height="@dimen/size_07"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/send"
+            android:tint="@color/white_pressed_dark"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toTopOf="@id/spacer_bottom"
+            app:layout_constraintEnd_toStartOf="@id/spacer_end"
+            app:rippleColor="@color/colorAccentLight" />
+    </android.support.constraint.ConstraintLayout>
 </layout>

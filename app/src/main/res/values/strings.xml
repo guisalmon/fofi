@@ -3,4 +3,8 @@
     <string name="main_nav_identify">Identify</string>
     <string name="main_nav_search">Search</string>
     <string name="main_nav_settings">Settings</string>
+
+    <string name="add_film_type">Film name</string>
+    <string name="add_sensibility">Iso</string>
+    <string name="add_date">Time period</string>
 </resources>

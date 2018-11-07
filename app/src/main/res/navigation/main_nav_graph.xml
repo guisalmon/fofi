@@ -7,4 +7,9 @@
         android:id="@+id/identify_fragment"
         android:name="android.robnetwork.org.fofi.ui.fragment.IdentifyFragment">
     </fragment>
+
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="android.robnetwork.org.fofi.ui.fragment.SearchFragment">
+    </fragment>
 </navigation>

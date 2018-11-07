@@ -31,8 +31,11 @@
                 android:id="@+id/toolbar_search"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/size_03"
+                android:layout_marginEnd="@dimen/size_03"
                 android:tint="@color/white"
-                app:searchHintIcon="@null" />
+                app:searchHintIcon="@null"
+                app:theme="@style/AppTheme"/>
 
             <ImageView
                 android:id="@+id/toolbar_right_action"

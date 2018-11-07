@@ -2,24 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/search_film"
+        android:id="@id/identify_fragment"
         android:enabled="true"
         android:icon="@drawable/filmstrip"
         android:title="@string/main_nav_identify"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/search_folder"
+        android:id="@id/search_fragment"
         android:enabled="true"
         android:icon="@drawable/magnify"
         android:title="@string/main_nav_search"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/add_film"
+        android:id="@+id/settings_fragment"
         android:enabled="true"
-        android:icon="@drawable/plus"
-        android:title="@string/main_nav_add"
+        android:icon="@drawable/dots_horizontal"
+        android:title="@string/main_nav_settings"
         app:showAsAction="ifRoom" />
 
 </menu>

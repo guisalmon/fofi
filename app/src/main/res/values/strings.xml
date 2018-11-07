@@ -2,5 +2,5 @@
     <string name="app_name">Fofi</string>
     <string name="main_nav_identify">Identify</string>
     <string name="main_nav_search">Search</string>
-    <string name="main_nav_add">Add</string>
+    <string name="main_nav_settings">Settings</string>
 </resources>

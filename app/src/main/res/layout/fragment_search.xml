@@ -40,29 +40,13 @@
             android:layout_height="match_parent"
             android:background="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent" />
-        
-        <View
-            android:id="@+id/qrcode_view"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/size_16"
-            android:background="@color/colorAccent"
-            app:layout_constraintStart_toEndOf="@id/spacer_start"
-            app:layout_constraintTop_toBottomOf="@id/spacer_top"
-            app:layout_constraintDimensionRatio="1:1"/>
 
-        <android.support.design.widget.FloatingActionButton
-            android:layout_width="0dp"
-            android:layout_height="@dimen/size_07"
-            android:background="@color/colorAccent"
-            android:src="@drawable/plus"
-            android:tint="@color/white"
-            android:clickable="true"
-            android:focusable="true"
-            app:fabSize="normal"
-            app:rippleColor="@color/colorAccentLight"
-            app:layout_constraintTop_toTopOf="@+id/header_diagonal"
-            app:layout_constraintEnd_toStartOf="@id/spacer_end"
-            app:layout_constraintDimensionRatio="1:1"/>
+        <android.robnetwork.org.fofi.ui.view.ColorSelector
+            android:id="@+id/color_selector"
+            android:layout_height="@dimen/size_04"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/spacer_start"
+            app:layout_constraintTop_toBottomOf="@id/spacer_top"/>
 
     </android.support.constraint.ConstraintLayout>
 </layout>

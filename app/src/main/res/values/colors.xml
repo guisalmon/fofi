@@ -7,6 +7,7 @@
     <color name="colorAccentDark">#9f0000</color>
     <color name="colorAccentLight">#ff5c43</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
 
     <color name="text">#999999</color>
     <color name="divider">#dddddd</color>

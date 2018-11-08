@@ -14,6 +14,8 @@ enum class Iso(val value: Int = 0) {
 
     override fun toString() = "${this.value} iso"
 
+    fun toMap() = mapOf(Pair("iso", value))
+
     companion object {
         const val COLLECTION = "Isos"
 

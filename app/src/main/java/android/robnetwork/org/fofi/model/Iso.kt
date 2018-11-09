@@ -1,5 +1,7 @@
 package android.robnetwork.org.fofi.model
 
+import com.google.firebase.firestore.DocumentSnapshot
+
 enum class Iso(val value: Int = 0) {
     ISO_ANY(0),
     ISO_100(100),
@@ -17,8 +19,8 @@ enum class Iso(val value: Int = 0) {
     fun toMap() = mapOf(Pair("iso", value))
 
     companion object {
-        const val COLLECTION = "Isos"
-
-        fun intToIso(value: Int) = values().firstOrNull { it.value == value } ?: ISO_ANY
+        fun toModel(document: DocumentSnapshot) = (document.get("iso") as? Int)?.let { value ->
+            values().firstOrNull { it.value == value } ?: ISO_ANY
+        }
     }
 }

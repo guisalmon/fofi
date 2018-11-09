@@ -12,8 +12,4 @@ data class Roll(
     val driveLocation: String = "",
     val lastAccessDate: Timestamp = Timestamp(Date()),
     val codeName: String = film.id + driveLocation
-) {
-    companion object {
-        const val COLLECTION = "Rolls"
-    }
-}
+)

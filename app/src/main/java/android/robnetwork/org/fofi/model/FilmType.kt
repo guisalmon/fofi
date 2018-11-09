@@ -1,5 +1,7 @@
 package android.robnetwork.org.fofi.model
 
+import com.google.firebase.firestore.DocumentSnapshot
+
 enum class FilmType {
     BLACK_N_WHITE,
     COLOR_NEGATIVE,
@@ -11,6 +13,8 @@ enum class FilmType {
     fun toMap() = mapOf(Pair("filmType", name))
 
     companion object {
-        const val COLLECTION = "FilmTypes"
+        fun toModel(document: DocumentSnapshot) = (document.get("filmType") as? String)?.let { name ->
+            values().firstOrNull { it.name == name} ?: ANY
+        }
     }
 }

@@ -3,6 +3,7 @@ package android.robnetwork.org.fofi.datasource
 import android.robnetwork.org.fofi.model.FilmType
 import android.robnetwork.org.fofi.model.Iso
 import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import io.reactivex.Observable
@@ -22,6 +23,8 @@ object Datasource {
             .addOnSuccessListener { singleEmitter.onSuccess(pojo) }
             .addOnFailureListener { singleEmitter.onError(it) }
     }
+
+    fun getReference(iso: Iso): DocumentReference? = iso.collection().whereEqualTo("iso", iso.value).get().result?.documents?.firstOrNull()?.reference
 
     private fun <T : Any> T.collection() = FirebaseFirestore.getInstance().collection(javaClass.simpleName)
 

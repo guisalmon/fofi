@@ -24,9 +24,11 @@ object Datasource {
             .addOnFailureListener { singleEmitter.onError(it) }
     }
 
-    fun getReference(iso: Iso): DocumentReference? = iso.collection().whereEqualTo("iso", iso.value).get().result?.documents?.firstOrNull()?.reference
+    fun getReferencePath(iso: Iso): String? = iso.collection().whereEqualTo("iso", iso.value).get().result?.documents?.firstOrNull()?.reference?.path
 
-    private fun <T : Any> T.collection() = FirebaseFirestore.getInstance().collection(javaClass.simpleName)
+    fun <T : Any> T.getReference(path: String): DocumentReference = collection().document(path)
+
+    fun <T : Any> T.collection() = FirebaseFirestore.getInstance().collection(javaClass.simpleName)
 
     private fun <T : Any> CollectionReference.addModel(model: T) = add(
         when (model) {

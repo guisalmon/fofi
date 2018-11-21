@@ -16,9 +16,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         super.setupUI(binding)
         binding.toolbar.toolbarTitle.visibility = View.GONE
         binding.bottomNavigation.setupWithNavController(findNavController(R.id.nav_host_fragment))
-        Datasource.getReference(Iso.ISO_400)?.let { isoReference ->
-
-        }
     }
 
     fun toolbar(): ToolbarBinding? = binding?.toolbar

@@ -26,6 +26,8 @@ object Datasource {
 
     fun getReferencePath(iso: Iso): String? = iso.collection().whereEqualTo("iso", iso.value).get().result?.documents?.firstOrNull()?.reference?.path
 
+    fun getReferencePath(filmType: FilmType): String? = filmType.collection().whereEqualTo("filmType", filmType.name).get().result?.documents?.firstOrNull()?.reference?.path
+
     fun <T : Any> T.getReference(path: String): DocumentReference = collection().document(path)
 
     fun <T : Any> T.collection() = FirebaseFirestore.getInstance().collection(javaClass.simpleName)
